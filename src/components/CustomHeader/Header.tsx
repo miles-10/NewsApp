@@ -39,14 +39,14 @@ const Header = () => {
       'November',
       'December',
     ];
-    let date = new Date();
-    let week_name = week[date.getDay()];
-    let month_number = new Date().getMonth();
+    let date = new Date().getDay();
+    let week_name = week[date];
+    let date_number = new Date().getDate();
     let month = new Date();
     let month_name = months[month.getMonth()];
     let year = new Date().getFullYear();
 
-    setCurrentDate(week_name + ', ' + month_name + ' ' + month_number + ', ' + year);
+    setCurrentDate(week_name + ', ' + month_name + ' ' + date_number + ', ' + year);
   }, []);
   return (
     <SafeAreaView>

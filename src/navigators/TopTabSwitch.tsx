@@ -1,49 +1,35 @@
-// import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-// import React, {useState} from 'react';
-
-// const CustomSwitch = ({
-//   selectionMode,
-//   option1,
-//   option2,
-//   onSelectSwitch,
-// }: any) => {
-// //   const [getSelectionMode, setSelectionMode] = useState(selectionMode);
-//   return (
-//     <View style={styles.container}>
-//       <TouchableOpacity>
-//         <Text>Provinces</Text>
-//       </TouchableOpacity>
-//     </View>
-//   );
-// };
-
-// export default CustomSwitch;
-
-// const styles = StyleSheet.create({
-
-// });
 import React from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import ProvinceScreen from '@screens/ProvinceScreen';
 import TrendingScreen from '@screens/TrendingScreen';
 import Colors from '@assets/colors/color';
+import {SafeAreaView, Text, View} from 'react-native';
 
 const Tab = createMaterialTopTabNavigator();
 
+const NEw = () => {
+  return( 
+  <View style={{flex: 1, backgroundColor: Colors.red}}>
+  <Text>Hello, world!</Text>
+  </View>
+  )
+}
 const HomeTab = () => {
-  const AddButton = () => {
-    return null;
-  };
   return (
     <Tab.Navigator
+      initialRouteName="Provinces"
       screenOptions={{
         tabBarStyle: {
-          marginRight: 80, 
-          elevation: 0, 
-          borderBottomColor: Colors.red
+          marginRight: 80,
+          elevation: 0,
+          borderBottomColor: Colors.red,
         },
         tabBarLabelStyle: {fontWeight: 'bold', fontSize: 15},
-        
+        tabBarIndicatorStyle: {
+          backgroundColor: Colors.red,
+          borderColor: Colors.red,
+          borderWidth: 2,
+        },
       }}>
       <Tab.Screen name="Provinces" component={ProvinceScreen} />
       <Tab.Screen name="Trending" component={TrendingScreen} />

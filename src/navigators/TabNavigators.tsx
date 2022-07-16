@@ -12,9 +12,8 @@ const Tab = createBottomTabNavigator();
 
 export default function MyTabs() {
   return (
-    <NavigationContainer>
+    <>
       <Header />
-      
       <Tab.Navigator
         screenOptions={{
           headerShown: false,
@@ -23,18 +22,14 @@ export default function MyTabs() {
             marginBottom: 10,
             color: Colors.grey,
           },
-          
+
           tabBarStyle: {
             marginHorizontal: 120,
             backgroundColor: Colors.white,
             elevation: 0,
             height: 60,
           },
-          tabBarIndicatorStyle: {
-            backgroundColor: Colors.red,
-          }
         }}>
-        
         <Tab.Screen
           name="Home"
           component={HomeScreen}
@@ -59,12 +54,9 @@ export default function MyTabs() {
             ),
           }}
         />
-       
       </Tab.Navigator>
-    </NavigationContainer>
+    </>
   );
 }
 
-const styles = StyleSheet.create({
-  
-})
+const styles = StyleSheet.create({});

@@ -1,10 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import DetailHeader from '@components/CustomHeader/DetailHeader'
 
-const DetailScreen = () => {
+const DetailScreen = ({props}: any) => {
+  // console.log(props.title)
   return (
     <View>
-      <Text>DetailScreen</Text>
+      <DetailHeader />
+      <View>
+        <Text>{}</Text>
+      </View>
     </View>
   )
 }
