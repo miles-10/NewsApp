@@ -9,11 +9,12 @@ interface list {
   title?: string;
   name?: string;
   date?: string;
+  discription?: string;
 }
-const ListNews: FC<list> = ({id, image, title, name, date}) => {
+const ListNews: FC<list> = ({id, image, title, name, date, discription}) => {
   const navigation: any = useNavigation();
   const handleOnPress = () => {
-    return navigation.navigate('DetailScreen', {id, image, title, name, date} );
+    return navigation.navigate('DetailScreen', {id, image, title, name, date, discription});
   };
   return (
     <TouchableOpacity onPress={handleOnPress}>
@@ -61,17 +62,18 @@ const styles = StyleSheet.create({
   },
   title: {
     marginTop: 5,
-    fontSize: 14,
-    fontWeight: 'bold',
+    fontSize: 13,
+    fontFamily: 'Mont-Bold',
     marginBottom: 5,
   },
   name: {
     flexDirection: 'row',
   },
   text: {
-    fontSize: 12,
-    fontWeight: 'bold',
+    fontSize: 11,
+    fontFamily: 'Mont-Bold',
     marginTop: 20,
-    margin: 3,
+    margin: 5,
+    color: Colors.red,
   },
 });

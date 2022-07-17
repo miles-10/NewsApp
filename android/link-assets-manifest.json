@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Mont-Black.ttf",
+      "sha1": "3d669e623a6e7b848add67a10b452dd68ddf052d"
+    },
+    {
+      "path": "src/assets/fonts/Mont-Bold.ttf",
+      "sha1": "c86f6208c18bc951b5f3c84e5915c342347d5fb9"
+    },
+    {
+      "path": "src/assets/fonts/Mont-Light.ttf",
+      "sha1": "e74930201e96dc4aa71406575fbf816371efece7"
+    },
+    {
+      "path": "src/assets/fonts/Mont-Regular.ttf",
+      "sha1": "14939f00b10e5c02664c07a82bacd430fab9c66e"
+    }
+  ]
+}

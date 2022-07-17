@@ -3,13 +3,14 @@ import React from 'react';
 import TrendingNews from '@components/TrendingNews/TrendingNews';
 import {trending} from '@components/trendingbutton';
 import Button from '@components/CustomButton/CustomButton';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const TrendingScreen = () => {
   const data = trending;
   return (
-    <View style={styles.mainContainer}>
+    <SafeAreaView style={styles.mainContainer}>
+    <ScrollView>
       <FlatList
-        style={styles.flat}
         data={data}
         keyExtractor={(item, index) => 'key' + index}
         showsHorizontalScrollIndicator={false}
@@ -23,7 +24,8 @@ const TrendingScreen = () => {
         }}
       />
         <TrendingNews />
-    </View>
+    </ScrollView>
+    </SafeAreaView>
   );
 };
 
@@ -31,6 +33,6 @@ export default TrendingScreen;
 
 const styles = StyleSheet.create({
   mainContainer: {
-    marginTop: 10,
+    marginTop: 400,
   }
 });

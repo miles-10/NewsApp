@@ -20,6 +20,7 @@ const LatestNews = () => {
                 title={show.item.title}
                 name={show.item.name}
                 date={show.item.date}
+                discription={show.item.discription}
               />
             );
           }}
@@ -31,13 +32,12 @@ const LatestNews = () => {
 
 const styles = StyleSheet.create({
   first: {
-    backgroundColor: Colors.grey,
+    backgroundColor: Colors.semi_white,
     marginTop: 10,
   },
   secondFlatlist: {
     marginTop: 10,
     marginHorizontal: 10,
-    backgroundColor: Colors.grey,
   },
 });
 

@@ -30,13 +30,13 @@ export default CustomButton;
 const styles = StyleSheet.create({
   container: {
     marginVertical: 5,
-    marginHorizontal: 10,
+    marginHorizontal: 3,
     flex: 1,
     flexDirection: 'row',
   },
   btnActive: {
-    marginLeft: 10,
-    marginRight: 10,
+    marginLeft: 11,
+    marginRight: 12,
     marginTop: 20,
     height: 36,
     backgroundColor: Colors.red,
@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
   textActive: {
     fontSize: 13,
     fontWeight: '400',
+    fontFamily: 'Mont-Regular',
     color: Colors.white,
   },
   textInActive: {

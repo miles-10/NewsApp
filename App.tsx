@@ -19,6 +19,7 @@ const App = () => {
     <NavigationContainer>
     <StackNavigators />
     {/* <TabNavigator /> */}
+    {/* <TrendingScreen /> */}
     {/* <HomeScreen /> */}
     {/* <HomeTab/> */}
     {/* <CustomSwitch /> */}

@@ -14,6 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-NewsApp-NewsAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-NewsApp-NewsAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		53EDAC1CA8634C2EA1C56FB1 /* Mont-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40E70C3F84034A32B4FAA613 /* Mont-Black.ttf */; };
+		E3D6C807A50B4673BA777FD8 /* Mont-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F41E24945C84B8BA517DC91 /* Mont-Bold.ttf */; };
+		972B28F92C3B4FDBA534DA7C /* Mont-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349510F82AA24B5EB6397E3C /* Mont-Light.ttf */; };
+		68D78AC2AD3840AAA81C37EC /* Mont-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BDD35C5E7F044C4A51394C5 /* Mont-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NewsApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-NewsApp-NewsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp-NewsAppTests.release.xcconfig"; path = "Target Support Files/Pods-NewsApp-NewsAppTests/Pods-NewsApp-NewsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		40E70C3F84034A32B4FAA613 /* Mont-Black.ttf */ = {isa = PBXFileReference; name = "Mont-Black.ttf"; path = "../src/assets/fonts/Mont-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3F41E24945C84B8BA517DC91 /* Mont-Bold.ttf */ = {isa = PBXFileReference; name = "Mont-Bold.ttf"; path = "../src/assets/fonts/Mont-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		349510F82AA24B5EB6397E3C /* Mont-Light.ttf */ = {isa = PBXFileReference; name = "Mont-Light.ttf"; path = "../src/assets/fonts/Mont-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6BDD35C5E7F044C4A51394C5 /* Mont-Regular.ttf */ = {isa = PBXFileReference; name = "Mont-Regular.ttf"; path = "../src/assets/fonts/Mont-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				09D48CBD408F4D0287207CC5 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +156,18 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		09D48CBD408F4D0287207CC5 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				40E70C3F84034A32B4FAA613 /* Mont-Black.ttf */,
+				3F41E24945C84B8BA517DC91 /* Mont-Bold.ttf */,
+				349510F82AA24B5EB6397E3C /* Mont-Light.ttf */,
+				6BDD35C5E7F044C4A51394C5 /* Mont-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -244,6 +265,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				53EDAC1CA8634C2EA1C56FB1 /* Mont-Black.ttf in Resources */,
+				E3D6C807A50B4673BA777FD8 /* Mont-Bold.ttf in Resources */,
+				972B28F92C3B4FDBA534DA7C /* Mont-Light.ttf in Resources */,
+				68D78AC2AD3840AAA81C37EC /* Mont-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

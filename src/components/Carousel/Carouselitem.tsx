@@ -1,33 +1,65 @@
-import {StyleSheet, Text, View, Image, Dimensions, TouchableOpacity} from 'react-native';
-import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Dimensions,
+  TouchableOpacity,
+} from 'react-native';
+import React, {FC} from 'react';
 import Colors from '@assets/colors/color';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
+
+interface Clist {
+  id?: any;
+  image?: any;
+  title?: string;
+  name?: string;
+  date?: string;
+  discription?: string;
+  item?: any;
+}
 
 const {width, height} = Dimensions.get('window');
-const Carouselitem = ({item}: any) => {
+const Carouselitem: FC<Clist> = ({
+  id,
+  image,
+  title,
+  name,
+  date,
+  discription,
+  item,
+}) => {
   const navigation: any = useNavigation();
   const handleOnPress = () => {
-    return navigation.navigate('DetailScreen', );
+    
+    return navigation.navigate('DetailScreen', {
+      id:item.id,
+      image:item.image,
+      title:item.title,
+      name:item.name,
+      date:item.date,
+      discription:item.discription,
+    });
   };
   return (
     <>
-    <TouchableOpacity onPress={handleOnPress}>
-      <View style={styles.cardView}>
-      <View>
-          <Image style={styles.image} source={item.image} />
-          <View style={styles.textView}>
-          <Text style={styles.title}>{item.title}</Text>
-          <View style={styles.textshow}>
-            <View style={styles.nested}>
-              <Text style={styles.text}>{item.name}</Text>
-              <Text style={styles.text}>{item.date}</Text>
-              <Text style={styles.text}>{item.state}</Text>
+      <TouchableOpacity onPress={handleOnPress}>
+        <View style={styles.cardView}>
+          <View>
+            <Image style={styles.image} source={item.image} />
+            <View style={styles.textView}>
+              <Text style={styles.title}>{item.title}</Text>
+              <View style={styles.textshow}>
+                <View style={styles.nested}>
+                  <Text style={styles.text}>{item.name}</Text>
+                  <Text style={styles.text}>{item.date}</Text>
+                  <Text style={styles.text}>{item.state}</Text>
+                </View>
+              </View>
             </View>
           </View>
         </View>
-        </View>
-      
-      </View>
       </TouchableOpacity>
     </>
   );
@@ -65,8 +97,9 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 15,
     lineHeight: 15,
-    fontWeight: '700',
+    // fontWeight: '700',
     color: Colors.black,
+    fontFamily: 'Mont-Bold',
   },
   textshow: {
     flex: 1,
@@ -77,9 +110,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignSelf: 'flex-end',
     fontSize: 12,
-    fontWeight: '700',
+    // fontWeight: '700',
+    fontFamily: 'Mont-Regular',
     color: Colors.red,
-    margin: 25,
+    margin: 23,
     lineHeight: 13,
     marginBottom: 10,
   },

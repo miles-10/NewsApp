@@ -96,8 +96,9 @@ export default DetaiHeader;
 const styles = StyleSheet.create({
   header: {
     height: 80,
-    marginLeft: 5,
-    marginRight: 5,
+    width: '100%',
+    // marginLeft: 5,
+    // marginRight: 5,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
@@ -124,7 +125,8 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
+    fontFamily: 'Mont-Bold',
     color: Colors.black,
   },
   date: {
@@ -139,7 +141,5 @@ const styles = StyleSheet.create({
     marginRight: 20,
   }
 });
-function goBack(): void {
-  throw new Error('Function not implemented.');
-}
+
 

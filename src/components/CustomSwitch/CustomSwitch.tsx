@@ -26,6 +26,7 @@ const CustomSwitch = ({
             position: 'absolute',
             fontWeight: getSelectionMode == 1 ? '800' : '600',
             fontSize: 16,
+            fontFamily: 'Mont-SemiBold',
             left: 30,
         }}>{option1}</Text>
         <View style={{
@@ -45,6 +46,7 @@ const CustomSwitch = ({
         <Text style={{
              color: getSelectionMode == 2 ? Colors.black : Colors.grey,
             fontWeight: getSelectionMode == 2 ? '800' : '600',
+            fontFamily: 'Mont-SemiBold',
             fontSize: 15,
             position: 'absolute',
             left: 30,

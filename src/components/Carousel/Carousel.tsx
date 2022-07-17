@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   text: {
     marginTop: 10,
     fontSize: 18,
-    fontWeight: 'bold',
+    fontFamily: 'Mont-Bold',
     color: Colors.black,
   },
 });

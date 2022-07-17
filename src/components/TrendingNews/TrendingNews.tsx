@@ -20,6 +20,7 @@ const TrendingNews = () => {
                 title={show.item.title}
                 name={show.item.name}
                 date={show.item.date}
+                discription={show.item.discription}
               />
             );
           }}
@@ -34,11 +35,10 @@ export default TrendingNews;
 const styles = StyleSheet.create({
   secondFlatlist: {
     marginTop: 20,
-    backgroundColor: Colors.semi_grey,
+    backgroundColor: Colors.semi_white,
   },
   list: {
-    
     marginTop: 10,
     marginHorizontal: 10,
-  }
+  },
 });
