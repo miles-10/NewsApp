@@ -2,12 +2,13 @@ import {StyleSheet, FlatList, Text, View, SafeAreaView} from 'react-native';
 import React from 'react';
 import ListNews from '@components/ListShow/ListNews';
 import {latestNews} from '@components/latestData';
+import Colors from '@assets/colors/color';
 
 const LatestNews = () => {
   const data = latestNews;
   return (
-    <View style={styles.secondFlatlist}>
-      <View>
+    <View style={styles.first}>
+      <View style={styles.secondFlatlist}>
         <FlatList
           data={data}
           keyExtractor={(show, index) => 'key' + index}
@@ -29,9 +30,14 @@ const LatestNews = () => {
 };
 
 const styles = StyleSheet.create({
+  first: {
+    backgroundColor: Colors.grey,
+    marginTop: 10,
+  },
   secondFlatlist: {
     marginTop: 10,
     marginHorizontal: 10,
+    backgroundColor: Colors.grey,
   },
 });
 
