@@ -12,7 +12,6 @@ import Colors from '@assets/colors/color';
 const ProvinceScreen = () => {
   const data = province;
   const ref = useRef<FlatList>(null);
-  console.log(data);
   const [index, setIndex] = useState(0);
   return (
     <SafeAreaView style={styles.mainContainer}>
@@ -21,6 +20,9 @@ const ProvinceScreen = () => {
         ref={ref}
         initialScrollIndex={index}
         data={data}
+        contentContainerStyle={{
+          paddingHorizontal: 0,
+        }}
         keyExtractor={(item, index) => 'key' + index}
         showsHorizontalScrollIndicator={false}
         horizontal

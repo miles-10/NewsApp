@@ -6,7 +6,7 @@ import ad from '@assets/images/ad.png';
 import TopTab from '@navigators/TopTabSwitch';
 import CustomSwitch from '@components/CustomSwitch/CustomSwitch'
 import ProvinceScreen from '@screens/ProvinceScreen';
-import TrendingNews from '@components/TrendingNews/TrendingNews';
+import TrendingScreen from '@screens/TrendingScreen';
 
 const HomeScreen = () => {
 
@@ -29,7 +29,7 @@ const HomeScreen = () => {
         />
         <View>
           {getTab == 1 && <ProvinceScreen />}
-          {getTab == 2 && <TrendingNews />}
+          {getTab == 2 && <TrendingScreen />}
         </View>
       </ScrollView>
     </View>

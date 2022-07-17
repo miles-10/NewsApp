@@ -83,19 +83,21 @@ const styles = StyleSheet.create({
   },
 
   icon1: {
-    marginLeft: 0,
+    marginLeft: 7,
     
   }, 
   text: {
-    marginTop: 5,
+    marginTop: 3,
     right: -90,
     fontFamily: 'Mont-Regular',
     fontSize: 12,
+    color: Colors.black,
   },
   text1: {
-    marginTop: 5,
-    left: -5,
+    marginTop: 3,
+    left: -3,
     fontFamily: 'Mont-Regular',
     fontSize: 12,
+    color: Colors.black,
   }
 });

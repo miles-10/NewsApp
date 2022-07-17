@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
     width: '57%',
   },
   title: {
+    color: Colors.black,
     marginTop: 5,
     fontSize: 13,
     fontFamily: 'Mont-Bold',

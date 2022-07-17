@@ -8,8 +8,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 const TrendingScreen = () => {
   const data = trending;
   return (
-    <SafeAreaView style={styles.mainContainer}>
-    <ScrollView>
+    <SafeAreaView>
+    <ScrollView style={styles.mainContainer}>
       <FlatList
         data={data}
         keyExtractor={(item, index) => 'key' + index}
@@ -18,7 +18,8 @@ const TrendingScreen = () => {
         renderItem={({item}) => {
           return (
             <Button
-              text={item.name} // onPress={()=>null}
+              text={item.name} 
+                onPress={()=> <TrendingNews />}
             />
           );
         }}
@@ -33,6 +34,6 @@ export default TrendingScreen;
 
 const styles = StyleSheet.create({
   mainContainer: {
-    marginTop: 400,
+
   }
 });
