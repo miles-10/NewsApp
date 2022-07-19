@@ -2,7 +2,7 @@ export const latestData6 = [
   {
     id: 1,
     state: 'Province 1',
-    image: require('../assets/images/6.png'),
+    image: require('../../assets/images/6.png'),
     title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
@@ -12,7 +12,7 @@ export const latestData6 = [
   {
     id: 2,
     state: 'Province 1',
-    image: require('../assets/images/7.png'),
+    image: require('../../assets/images/7.png'),
     title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
@@ -22,7 +22,7 @@ export const latestData6 = [
   {
     id: 3,
     state: 'Province 1',
-    image: require('../assets/images/8.png'),
+    image: require('../../assets/images/8.png'),
     title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
@@ -32,7 +32,7 @@ export const latestData6 = [
   {
     id: 4,
     state: 'Province 1',
-    image: require('../assets/images/1.png'),
+    image: require('../../assets/images/1.png'),
     title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
@@ -42,7 +42,7 @@ export const latestData6 = [
   {
     id: 5,
     state: 'Province 1',
-    image: require('../assets/images/2.png'),
+    image: require('../../assets/images/2.png'),
     title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
@@ -52,7 +52,7 @@ export const latestData6 = [
   {
     id: 6,
     state: 'Province 1',
-    image: require('../assets/images/3.png'),
+    image: require('../../assets/images/3.png'),
     title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
