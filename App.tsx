@@ -6,25 +6,27 @@ import ProvinceScreen from '@screens/ProvinceScreen';
 import Carouselitem from '@components/Carousel/Carousel';
 import {carouseldata} from '@components/caroseldata';
 import TrendingScreen from '@screens/TrendingScreen';
-import LatestNews from './src/components/LatestNews/LatestNews'
+import LatestNews from './src/components/LatestNews/LatestNews';
 import DetailScreen from '@screens/DetailScreen';
 import StackNavigators from '@navigators/StackNavigators';
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import HomeTab from '@navigators/TopTabSwitch';
 import CustomSwitch from '@components/CustomSwitch/CustomSwitch';
 import HomeScreen from '@screens/HomeScreen';
+import AuthProvider from '@components/AuthContext/AuthContext';
 const App = () => {
   return (
     <>
-    <NavigationContainer>
-    <StackNavigators />
-    {/* <TabNavigator /> */}
-    {/* <TrendingScreen /> */}
-    {/* <HomeScreen /> */}
-    {/* <HomeTab/> */}
-    {/* <CustomSwitch /> */}
-    </NavigationContainer>
-    
+      <AuthProvider>
+        <NavigationContainer>
+          <StackNavigators />
+          {/* <TabNavigator /> */}
+          {/* <TrendingScreen /> */}
+          {/* <HomeScreen /> */}
+          {/* <HomeTab/> */}
+          {/* <CustomSwitch /> */}
+        </NavigationContainer>
+      </AuthProvider>
       {/* <Header /> */}
       {/* <TabNavigator /> */}
       {/* <NavigationContainer>

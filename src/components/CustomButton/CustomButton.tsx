@@ -6,18 +6,21 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {FC, useState} from 'react';
+import React, {FC, useContext, useState} from 'react';
 import Colors from '@assets/colors/color';
+import {AuthContext} from '@components/AuthContext/AuthContext';
 
 interface button {
   onPress?: () => void;
   text?: string;
+  id?: any;
 }
-const CustomButton: FC<button> = ({onPress, text}) => {
+const CustomButton: FC<button> = ({onPress, text, id}) => {
+  const {myProvince, setMyProvince} = useContext(AuthContext)
   return (
     <>
       <View style={styles.container}>
-        <TouchableOpacity style={styles.btnActive}>
+        <TouchableOpacity onPress={()=>setMyProvince(text)} style={styles.btnActive}>
           <Text style={styles.textActive}>{text}</Text>
         </TouchableOpacity>
       </View>

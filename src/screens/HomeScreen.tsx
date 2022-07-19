@@ -11,6 +11,7 @@ import TrendingScreen from '@screens/TrendingScreen';
 const HomeScreen = () => {
 
   const [getTab, setGetTab] = useState(1);
+  
 
   const onSelectSwitch = (value : any) => {
     setGetTab(value);

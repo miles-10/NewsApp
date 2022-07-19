@@ -1,16 +1,23 @@
 import {StyleSheet, FlatList, Text, View, SafeAreaView} from 'react-native';
-import React from 'react';
+import React, {useContext} from 'react';
 import ListNews from '@components/ListShow/ListNews';
 import {latestNews} from '@components/latestData';
 import Colors from '@assets/colors/color';
+import {AuthContext} from '@components/AuthContext/AuthContext';
+import { latestData1 } from '@components/LatestData/LatestData1';
 
 const LatestNews = () => {
-  const data = latestNews;
+  const data = latestData1;
+  console.log(data);
+  const {myProvince, setMyProvince} = useContext(AuthContext);
+  console.log(myProvince);
   return (
     <View style={styles.first}>
       <View style={styles.secondFlatlist}>
         <FlatList
-          data={data}
+          data={data.filter(pro => {
+            return pro.state.toLowerCase() == myProvince.toLowerCase();
+          })}
           keyExtractor={(show, index) => 'key' + index}
           renderItem={(show: any) => {
             return (
@@ -38,6 +45,7 @@ const styles = StyleSheet.create({
   secondFlatlist: {
     marginTop: 10,
     marginHorizontal: 10,
+    width: '90%',
   },
 });
 
