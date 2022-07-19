@@ -5,15 +5,23 @@ import {
   TouchableOpacity,
   Image,
   SafeAreaView,
+  Alert,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import Logo from '@assets/images/NCLogo.png';
 import {Surface} from 'react-native-paper';
 import Svg, {Path} from 'react-native-svg';
 import Colors from '@assets/colors/color';
+import {AuthContext} from '@components/AuthContext/AuthContext';
 
 const Header = () => {
   const [currentDate, setCurrentDate] = useState('');
+  const {color, setColor} = useContext(AuthContext);
+  const showToast = () => {
+    Alert.alert('Feature Comming Soon!', 'This Feature is unavailable', [
+      {text: 'OK', onPress: () => console.log('OK Pressed')},
+    ]);
+  };
 
   useEffect(() => {
     const week = [
@@ -46,7 +54,9 @@ const Header = () => {
     let month_name = months[month.getMonth()];
     let year = new Date().getFullYear();
 
-    setCurrentDate(week_name + ', ' + month_name + ' ' + date_number + ', ' + year);
+    setCurrentDate(
+      week_name + ', ' + month_name + ' ' + date_number + ', ' + year,
+    );
   }, []);
   return (
     <SafeAreaView>
@@ -56,16 +66,16 @@ const Header = () => {
             <Image source={Logo} style={styles.image} />
           </View>
           <View style={styles.texts}>
-            <Text style={styles.text}>Nepali Congress</Text>
+            <Text style={[styles.text, {color}]}>Nepali Congress</Text>
             <Text style={styles.date}>{currentDate}</Text>
           </View>
-          <TouchableOpacity>
-          <View style={styles.search}>
-            <Svg width={23} height={23} stroke={Colors.black}>
-              <Path d="M9.78031 16.7341C13.4622 16.7341 16.447 13.7494 16.447 10.0675C16.447 6.38556 13.4622 3.40079 9.78031 3.40079C6.09842 3.40079 3.11365 6.38556 3.11365 10.0675C3.11365 13.7494 6.09842 16.7341 9.78031 16.7341Z" />
-              <Path d="M18.1136 18.4008L14.4886 14.7758" />
-            </Svg>
-          </View>
+          <TouchableOpacity onPress={showToast}>
+            <View style={styles.search}>
+              <Svg width={23} height={23} stroke={Colors.black}>
+                <Path d="M9.78031 16.7341C13.4622 16.7341 16.447 13.7494 16.447 10.0675C16.447 6.38556 13.4622 3.40079 9.78031 3.40079C6.09842 3.40079 3.11365 6.38556 3.11365 10.0675C3.11365 13.7494 6.09842 16.7341 9.78031 16.7341Z" />
+                <Path d="M18.1136 18.4008L14.4886 14.7758" />
+              </Svg>
+            </View>
           </TouchableOpacity>
         </View>
       </Surface>
@@ -101,11 +111,10 @@ const styles = StyleSheet.create({
     width: 80,
   },
   texts: {
-    marginRight: 70,
+    marginRight: '16%',
   },
   text: {
     fontSize: 20,
-    // fontWeight: 'bold',
     color: Colors.black,
     fontFamily: 'Mont-Bold',
   },

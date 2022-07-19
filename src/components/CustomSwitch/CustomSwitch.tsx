@@ -1,6 +1,7 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import Colors from '@assets/colors/color';
+import {AuthContext} from '@components/AuthContext/AuthContext';
 
 const CustomSwitch = ({
   selectionMode,
@@ -9,9 +10,15 @@ const CustomSwitch = ({
   onSelectSwitch,
 }: any) => {
   const [getSelectionMode, setSelectionMode] = useState(selectionMode);
+  const {color, setColor} = useContext(AuthContext);
   const updateSwitchData = (value: any) => {
     setSelectionMode(value);
     onSelectSwitch(value);
+    if (value == 2) {
+      setColor(Colors.red);
+    } else {
+      setColor(Colors.black);
+    }
   };
   return (
     <>
@@ -20,7 +27,6 @@ const CustomSwitch = ({
           <TouchableOpacity
             style={{
               flex: 1,
-              // backgroundColor: getSelectionMode === 1 ? Colors.red : Colors.grey,
               justifyContent: 'center',
               alignItems: 'center',
             }}
@@ -29,10 +35,11 @@ const CustomSwitch = ({
               style={{
                 color: getSelectionMode == 1 ? Colors.black : Colors.semi_grey,
                 position: 'absolute',
-                fontWeight: getSelectionMode == 1 ? '800' : '600',
+                fontWeight: '600',
+                fontFamily:
+                  getSelectionMode == 1 ? 'Mont-Bold' : 'Mont-Regular',
                 fontSize: 16,
-                fontFamily: 'Mont-SemiBold',
-                left: 20,
+                left: 15,
               }}>
               {option1}
             </Text>
@@ -57,11 +64,12 @@ const CustomSwitch = ({
             <Text
               style={{
                 color: getSelectionMode == 2 ? Colors.black : Colors.semi_grey,
-                fontWeight: getSelectionMode == 2 ? '800' : '600',
-                fontFamily: 'Mont-SemiBold',
+                fontWeight: '600',
+                fontFamily:
+                  getSelectionMode == 2 ? 'Mont-Bold' : 'Mont-Regular',
                 fontSize: 15,
                 position: 'absolute',
-                left: 20,
+                left: 15,
               }}>
               {option2}
             </Text>
@@ -99,16 +107,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
     height: 44,
     marginHorizontal: 20,
-    // backgroundColor: Colors.red,
     flexDirection: 'row',
     width: '50%',
     justifyContent: 'center',
   },
-  // touch: {
-  //     flex: 1,
-  //     backgroundColor: getSelectionMode === 1 ? Colors.red : Colors.grey,
-  //     borderRadius: 10,
-  //     justifyContent: 'center',
-  //     alignItems: 'center',
-  // }
 });

@@ -42,8 +42,8 @@ const styles = StyleSheet.create({
   textTitle: {
     marginTop: 20,
     fontSize: 20,
-    fontFamily: 'Mont-SemiBold',
-    // fontWeight: '700',
+    fontFamily: 'Mont-Light',
+    fontWeight: '700',
     color: Colors.black,
   },
   rowData: {
@@ -54,12 +54,14 @@ const styles = StyleSheet.create({
   text1: {
     fontSize: 12,
     marginRight: 20,
+    fontWeight: '600',
     fontFamily: 'Mont-Regular',
     color: Colors.red,
   },
   text2: {
     fontSize: 12,
     fontFamily: 'Mont-Regular',
+    fontWeight: '600',
     color: Colors.red,
   },
   image: {

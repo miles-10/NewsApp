@@ -7,8 +7,8 @@ import {trendingNews} from '@components/trendingData';
 const TrendingNews = () => {
   const data = trendingNews;
   return (
-    <View style={styles.secondFlatlist}>
-      <View style={styles.list}>
+    <View style={styles.first}>
+      <View style={styles.secondFlatlist}>
         <FlatList
           data={data}
           keyExtractor={(show, index) => 'key' + index}
@@ -33,12 +33,13 @@ const TrendingNews = () => {
 export default TrendingNews;
 
 const styles = StyleSheet.create({
+  first: {
+    backgroundColor: Colors.semi_white,
+    marginTop: 10,
+  },
   secondFlatlist: {
     marginTop: 10,
-    backgroundColor: Colors.semi_white,
-  },
-  list: {
-    marginTop: 10,
     marginHorizontal: 10,
+    width: '95%',
   },
 });

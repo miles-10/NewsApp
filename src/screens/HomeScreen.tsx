@@ -1,31 +1,29 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
-import React, { useState } from 'react';
+import {StyleSheet, View, Image} from 'react-native';
+import React, {useContext, useState} from 'react';
 import {ScrollView} from 'react-native-gesture-handler';
 import Colors from '@assets/colors/color';
 import ad from '@assets/images/ad.png';
-import TopTab from '@navigators/TopTabSwitch';
-import CustomSwitch from '@components/CustomSwitch/CustomSwitch'
+import CustomSwitch from '@components/CustomSwitch/CustomSwitch';
 import ProvinceScreen from '@screens/ProvinceScreen';
 import TrendingScreen from '@screens/TrendingScreen';
 
 const HomeScreen = () => {
-
   const [getTab, setGetTab] = useState(1);
-  
 
-  const onSelectSwitch = (value : any) => {
+  const onSelectSwitch = (value: any) => {
     setGetTab(value);
-  }
+  };
   return (
     <View style={styles.mainContainer}>
       <ScrollView style={styles.container}>
         <View>
           <Image style={styles.adImage} source={ad} />
         </View>
-        <CustomSwitch 
+        <CustomSwitch
+          getTab={getTab}
           selectionMode={1}
-          option1= "Province"
-          option2= "Trending"
+          option1="Province"
+          option2="Trending"
           onSelectSwitch={onSelectSwitch}
         />
         <View>
@@ -44,9 +42,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
     height: '100%',
   },
-  container: {
-    // marginHorizontal: 15,
-  },
+  container: {},
   adImage: {
     height: 60,
     width: '90%',

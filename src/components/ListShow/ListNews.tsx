@@ -14,7 +14,14 @@ interface list {
 const ListNews: FC<list> = ({id, image, title, name, date, discription}) => {
   const navigation: any = useNavigation();
   const handleOnPress = () => {
-    return navigation.navigate('DetailScreen', {id, image, title, name, date, discription});
+    return navigation.navigate('DetailScreen', {
+      id,
+      image,
+      title,
+      name,
+      date,
+      discription,
+    });
   };
   return (
     <TouchableOpacity onPress={handleOnPress}>
@@ -58,7 +65,7 @@ const styles = StyleSheet.create({
   },
   textView: {
     marginTop: 10,
-    width: '57%',
+    width: '56%',
   },
   title: {
     color: Colors.black,
@@ -71,10 +78,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   text: {
+    marginTop: '10%',
     fontSize: 11,
     fontFamily: 'Mont-Bold',
-    marginTop: 20,
-    margin: 5,
+    margin: 3,
     color: Colors.red,
   },
 });

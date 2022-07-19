@@ -52,9 +52,9 @@ const Carouselitem: FC<Clist> = ({
               <Text style={styles.title}>{item.title}</Text>
               <View style={styles.textshow}>
                 <View style={styles.nested}>
-                  <Text style={styles.text}>{item.name}</Text>
-                  <Text style={styles.text}>{item.date}</Text>
-                  <Text style={styles.text}>{item.state}</Text>
+                  <Text style={styles.text1}>{item.name}</Text>
+                  <Text style={styles.text2}>{item.date}</Text>
+                  <Text style={styles.text3}>{item.state}</Text>
                 </View>
               </View>
             </View>
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     zIndex: 2,
     margin: 10,
     borderRadius: 10,
-    marginTop: 100,
+    marginTop: 120,
     opacity: 0.95,
     backgroundColor: Colors.white,
     width: '95%',
@@ -97,28 +97,49 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 15,
     lineHeight: 15,
-    // fontWeight: '700',
     color: Colors.black,
     fontFamily: 'Mont-Bold',
   },
   textshow: {
     flex: 1,
     flexDirection: 'column',
-    alignSelf: 'center',
   },
-  text: {
+  text1: {
     flexDirection: 'row',
     alignSelf: 'flex-end',
     fontSize: 12,
-    // fontWeight: '700',
     fontFamily: 'Mont-Regular',
     color: Colors.red,
-    margin: 23,
     lineHeight: 13,
     marginBottom: 10,
+    marginTop: '4%',
+    marginRight: 10,
+  },
+  text2: {
+    flexDirection: 'row',
+    alignSelf: 'flex-end',
+    fontSize: 12,
+    fontFamily: 'Mont-Regular',
+    color: Colors.red,
+    lineHeight: 13,
+    marginBottom: 10,
+    marginTop: '4%',
+    marginLeft: 30,
+  },
+  text3: {
+    flexDirection: 'row',
+    alignSelf: 'flex-end',
+    fontSize: 12,
+    fontFamily: 'Mont-Regular',
+    color: Colors.red,
+    lineHeight: 13,
+    marginBottom: 10,
+    marginTop: '4%',
+    marginLeft: 40,
   },
   nested: {
     flexDirection: 'row',
+    marginHorizontal: 10,
   },
   view: {
     color: Colors.black,

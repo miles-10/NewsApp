@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {FC, useContext, useState} from 'react';
+import React, {FC, useContext} from 'react';
 import Colors from '@assets/colors/color';
 import {AuthContext} from '@components/AuthContext/AuthContext';
 
@@ -16,11 +16,13 @@ interface button {
   id?: any;
 }
 const CustomButton: FC<button> = ({onPress, text, id}) => {
-  const {myProvince, setMyProvince} = useContext(AuthContext)
+  const {myProvince, setMyProvince} = useContext(AuthContext);
   return (
     <>
       <View style={styles.container}>
-        <TouchableOpacity onPress={()=>setMyProvince(text)} style={styles.btnActive}>
+        <TouchableOpacity
+          onPress={() => setMyProvince(text)}
+          style={styles.btnActive}>
           <Text style={styles.textActive}>{text}</Text>
         </TouchableOpacity>
       </View>
@@ -47,17 +49,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 10,
     width: '100%',
-    alignSelf: 'center',
-  },
-  btnInActive: {
-    marginHorizontal: 5,
-    marginTop: 20,
-    height: 36,
-    backgroundColor: Colors.semi_grey,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 10,
-    width: '20%',
     alignSelf: 'center',
   },
   textActive: {

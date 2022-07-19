@@ -6,7 +6,7 @@ import {
   Animated,
   Dimensions,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Carouselitem from './Carouselitem';
 import Colors from '@assets/colors/color';
 
