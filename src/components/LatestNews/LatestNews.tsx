@@ -9,9 +9,7 @@ import {carouseldata} from '@components/caroseldata';
 
 const LatestNews = () => {
   const data = latestData1;
-  console.log(data);
   const {myProvince, setMyProvince} = useContext(AuthContext);
-  console.log(myProvince);
   return (
     <>
       <Carouselitem data={carouseldata} />

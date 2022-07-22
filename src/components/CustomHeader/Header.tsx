@@ -6,6 +6,7 @@ import {
   Image,
   SafeAreaView,
   Alert,
+  Dimensions,
 } from 'react-native';
 import React, {useContext, useEffect, useState} from 'react';
 import Logo from '@assets/images/NCLogo.png';
@@ -14,6 +15,8 @@ import Svg, {Path} from 'react-native-svg';
 import Colors from '@assets/colors/color';
 import {AuthContext} from '@components/AuthContext/AuthContext';
 
+
+const {width, height} = Dimensions.get('window');
 const Header = () => {
   const [currentDate, setCurrentDate] = useState('');
   const {color, setColor} = useContext(AuthContext);
@@ -88,38 +91,38 @@ export default Header;
 const styles = StyleSheet.create({
   header: {
     height: 80,
-    justifyContent: 'center',
-    alignItems: 'center',
     flexDirection: 'row',
     backgroundColor: Colors.white,
-    width: '100%',
   },
   view: {
     flex: 1,
     margin: 10,
     alignItems: 'center',
     flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   Logo: {
-    flex: 1,
     margin: 10,
     alignItems: 'center',
     flexDirection: 'row',
+    width: width * 0.15,
+    height: height * 0.0444,
   },
   image: {
-    height: 50,
-    width: 80,
+    height: '100%',
+    width: '100%',
   },
   texts: {
-    marginRight: '16%',
+    marginRight: width * 0.155,
   },
   text: {
-    fontSize: 20,
+    fontSize: 18,
     fontFamily: 'Mont-Bold',
+    width: width * 0.5,
   },
   date: {
     marginTop: 2,
-    fontSize: 14,
+    fontSize: 13,
     color: Colors.grey,
     fontFamily: 'Mont-Regular',
   },

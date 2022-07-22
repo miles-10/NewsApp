@@ -1,11 +1,4 @@
-import {
-  GestureResponderEvent,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {FC, useContext} from 'react';
 import Colors from '@assets/colors/color';
 import {AuthContext} from '@components/AuthContext/AuthContext';
@@ -16,13 +9,13 @@ interface button {
   id?: any;
 }
 const CustomButton: FC<button> = ({onPress, text, id}) => {
-  const {myProvince, setMyProvince} = useContext(AuthContext);
+  const {setMyProvince} = useContext(AuthContext);
   return (
     <>
       <View style={styles.container}>
         <TouchableOpacity
           onPress={() => setMyProvince(text)}
-          style={styles.btnActive}>
+          style={[styles.btnActive]}>
           <Text style={styles.textActive}>{text}</Text>
         </TouchableOpacity>
       </View>
@@ -35,20 +28,20 @@ export default CustomButton;
 const styles = StyleSheet.create({
   container: {
     marginVertical: 5,
-    marginHorizontal: 3,
+    marginHorizontal: 5,
     flex: 1,
     flexDirection: 'row',
   },
   btnActive: {
-    marginLeft: 11,
-    marginRight: 12,
+    marginLeft: 10,
+    marginRight: 10,
     marginTop: 20,
     height: 36,
     backgroundColor: Colors.red,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
-    width: '100%',
+    width: '90%',
     alignSelf: 'center',
   },
   textActive: {
@@ -59,7 +52,6 @@ const styles = StyleSheet.create({
   },
   textInActive: {
     fontSize: 13,
-
     fontWeight: '400',
     color: Colors.grey,
   },

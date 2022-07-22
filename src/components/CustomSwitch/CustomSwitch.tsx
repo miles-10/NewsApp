@@ -88,7 +88,6 @@ const CustomSwitch = ({
           style={{
             marginHorizontal: 20,
             marginTop: 2,
-
             zIndex: -1,
             height: 3,
             width: '90%',

@@ -52,9 +52,9 @@ const Carouselitem: FC<Clist> = ({
               <Text style={styles.title}>{item.title}</Text>
               <View style={styles.textshow}>
                 <View style={styles.nested}>
-                  <Text style={styles.text1}>{item.name}</Text>
-                  <Text style={styles.text2}>{item.date}</Text>
-                  <Text style={styles.text3}>{item.state}</Text>
+                  <Text style={styles.text}>{item.name}</Text>
+                  <Text style={styles.text}>{item.date}</Text>
+                  <Text style={styles.text}>{item.state}</Text>
                 </View>
               </View>
             </View>
@@ -81,10 +81,10 @@ const styles = StyleSheet.create({
     zIndex: 2,
     margin: 10,
     borderRadius: 10,
-    marginTop: 120,
+    marginTop: height * 0.14,
     opacity: 0.95,
     backgroundColor: Colors.white,
-    width: '95%',
+    width: width * 0.90,
   },
   image: {
     zIndex: 1,
@@ -96,24 +96,21 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginTop: 20,
     fontSize: 15,
-    lineHeight: 15,
+    lineHeight: 17,
+    letterSpacing: 0.4,
     color: Colors.black,
     fontFamily: 'Mont-Bold',
   },
-  textshow: {
-    flex: 1,
-    flexDirection: 'column',
-  },
-  text1: {
+  textshow: {},
+  text: {
     flexDirection: 'row',
-    alignSelf: 'flex-end',
+    // alignSelf: 'flex-end',
     fontSize: 12,
     fontFamily: 'Mont-Regular',
     color: Colors.red,
     lineHeight: 13,
     marginBottom: 10,
-    marginTop: '4%',
-    marginRight: 10,
+    marginTop: 15,
   },
   text2: {
     flexDirection: 'row',
@@ -139,7 +136,11 @@ const styles = StyleSheet.create({
   },
   nested: {
     flexDirection: 'row',
-    marginHorizontal: 10,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginLeft: 10,
+    marginRight: 55,
+    // marginHorizontal: 10,
   },
   view: {
     color: Colors.black,

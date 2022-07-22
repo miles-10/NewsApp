@@ -5,12 +5,16 @@ import {
   TouchableOpacity,
   SafeAreaView,
   Alert,
+  Dimensions,
 } from 'react-native';
 import React from 'react';
 import {Surface} from 'react-native-paper';
 import Svg, {Path} from 'react-native-svg';
 import Colors from '@assets/colors/color';
 import {useNavigation} from '@react-navigation/native';
+
+
+const {width, height} = Dimensions.get('window');
 
 const DetaiHeader = () => {
   const navigation = useNavigation();
@@ -62,31 +66,26 @@ export default DetaiHeader;
 
 const styles = StyleSheet.create({
   header: {
-    height: 80,
-    width: '100%',
-    justifyContent: 'center',
+    height: height * 0.090,
+    width: width,
+    justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
     backgroundColor: Colors.semi_white,
   },
   view: {
-    flex: 1,
+    width: width,
     margin: 10,
     alignItems: 'center',
     flexDirection: 'row',
   },
   Logo: {
-    flex: 1,
-    margin: 10,
+    marginLeft: width * 0.04722,
     alignItems: 'center',
     flexDirection: 'row',
   },
-  image: {
-    height: 50,
-    width: 80,
-  },
   texts: {
-    marginRight: 40,
+    marginLeft: 0.191 * width,
   },
   text: {
     fontSize: 20,
@@ -99,9 +98,10 @@ const styles = StyleSheet.create({
   },
   search: {
     flexDirection: 'row',
-    marginRight: 10,
+    marginRight: width * 0.04722,
+    marginLeft: width * 0.09,
   },
   icon1: {
-    marginRight: 20,
+    marginRight: 5,
   },
 });

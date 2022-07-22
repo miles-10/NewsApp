@@ -10,18 +10,18 @@ const ProvinceScreen = () => {
   const {myProvince, setMyProvince} = useContext(AuthContext);
   const data = province;
   const ref = useRef<FlatList>(null);
-  const [index, setIndex] = useState(0);
+  const [index] = useState(0);
   return (
     <SafeAreaView style={styles.mainContainer}>
       <ScrollView>
         <FlatList
           ref={ref}
-          initialScrollIndex={index}
           data={data}
+          initialScrollIndex={index}
           contentContainerStyle={{
             paddingHorizontal: 0,
           }}
-          keyExtractor={(item, index) => 'key' + index}
+          keyExtractor={(item, indexes) => 'key' + indexes}
           showsHorizontalScrollIndicator={false}
           horizontal
           renderItem={({item}) => {
@@ -29,6 +29,7 @@ const ProvinceScreen = () => {
               <Button id={item.id} text={item.name} onPress={setMyProvince} />
             );
           }}
+          style={styles.container}
         />
         <LatestNews />
       </ScrollView>
@@ -40,4 +41,8 @@ export default ProvinceScreen;
 
 const styles = StyleSheet.create({
   mainContainer: {},
+  container: {
+    marginRight: 17,
+    marginLeft: 3,
+  },
 });

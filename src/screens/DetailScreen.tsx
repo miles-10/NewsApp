@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontFamily: 'Mont-Regular',
     color: Colors.grey,
-    fontSize: 12,
+    fontSize: 14,
     lineHeight: 15,
   },
 });
