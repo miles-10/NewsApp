@@ -7,6 +7,7 @@ const AuthProvider = ({children}) => {
   const [myTrending, setMyTrending] = useState('sher bd. deuba');
   const [color, setColor] = useState(Colors.black);
   const [buttonColor, setButtonColor] = useState(Colors.red);
+  const [detailSave] = useState();
   return (
     <AuthContext.Provider
       value={{
@@ -18,6 +19,7 @@ const AuthProvider = ({children}) => {
         setMyTrending,
         buttonColor,
         setButtonColor,
+        detailSave,
       }}>
       {children}
     </AuthContext.Provider>

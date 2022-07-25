@@ -7,22 +7,57 @@ import {
   Alert,
   Dimensions,
 } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import {Surface} from 'react-native-paper';
 import Svg, {Path} from 'react-native-svg';
 import Colors from '@assets/colors/color';
 import {useNavigation} from '@react-navigation/native';
-
+import Share from 'react-native-share';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+// import mage from '@assets/images/2.png'
 
 const {width, height} = Dimensions.get('window');
 
-const DetaiHeader = () => {
+const DetaiHeader = ({params}: any) => {
+  const [saveData, setSaveData] = useState([]);
   const navigation = useNavigation();
-  const showToast = () => {
-    Alert.alert('Feature Comming Soon!', 'This Feature is unavailable', [
-      {text: 'OK', onPress: () => console.log('OK Pressed')},
-    ]);
+  const shareData = async() => {
+    const shareOptions = {
+      message: 'This is a test message',
+    }
+    try{
+      const shareResponse = await Share.open(shareOptions);
+    } catch(error) {
+      console.log('Error==>',error)
+    }
   };
+  // const handelSaved = async() => {
+    // const datas = await AsyncStorage.getItem('Saved')
+    // if(datas !== null) {
+    //   if()
+    //   setSaveData(JSON.parse(datas));
+    // }
+    // const arr: any = [
+    //   ...saveData,
+    //   params,
+    // ]
+    // setSaveData(arr);
+    // AsyncStorage.setItem('Saved', JSON.stringify(arr));
+    // console.log('savd', ...arr);
+    // console.log('ssss', datas);
+    //   }
+      
+const handleSubmit = () => {
+  const value = AsyncStorage.getItem('Saved').then((data) => {
+    if(data) {
+      console.log('data',data);
+      console.log('value')
+    }
+  })
+}
+  
+
+
   return (
     <SafeAreaView>
       <Surface style={styles.header}>
@@ -40,13 +75,13 @@ const DetaiHeader = () => {
           </View>
           <View style={styles.search}>
             <View style={styles.icon1}>
-              <TouchableOpacity onPress={showToast}>
+              <TouchableOpacity onPress={()=> handleSubmit}>
                 <Svg width={23} height={23} stroke={Colors.red}>
                   <Path d="M16.0183 17.9142L10.1849 14.5809L4.35159 17.9142V4.58085C4.35159 4.13882 4.52719 3.7149 4.83975 3.40234C5.15231 3.08978 5.57623 2.91418 6.01826 2.91418H14.3516C14.7936 2.91418 15.2175 3.08978 15.5301 3.40234C15.8427 3.7149 16.0183 4.13882 16.0183 4.58085V17.9142Z" />
                 </Svg>
               </TouchableOpacity>
             </View>
-            <TouchableOpacity onPress={showToast}>
+            <TouchableOpacity onPress={shareData}>
               <Svg width={23} height={23} stroke={Colors.red}>
                 <Path d="M15 6.9982C16.3807 6.9982 17.5 5.87891 17.5 4.4982C17.5 3.11749 16.3807 1.9982 15 1.9982C13.6193 1.9982 12.5 3.11749 12.5 4.4982C12.5 5.87891 13.6193 6.9982 15 6.9982Z" />
                 <Path d="M5 12.8315C6.38071 12.8315 7.5 11.7123 7.5 10.3315C7.5 8.95083 6.38071 7.83154 5 7.83154C3.61929 7.83154 2.5 8.95083 2.5 10.3315C2.5 11.7123 3.61929 12.8315 5 12.8315Z" />

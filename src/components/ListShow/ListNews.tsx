@@ -76,6 +76,8 @@ const styles = StyleSheet.create({
   },
   name: {
     flexDirection: 'row',
+    position: 'absolute',
+    top: 30,
   },
   text: {
     marginTop: '10%',

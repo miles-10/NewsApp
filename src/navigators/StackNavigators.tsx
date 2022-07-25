@@ -3,6 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import TabNavigator from '@navigators/TabNavigators';
 import DetailScreen from '@screens/DetailScreen';
 import SplashScreen from '@screens/SplashScreen';
+import DetaiHeader from '@components/CustomHeader/DetailHeader';
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,7 @@ const MyStack = () => {
       ) : null}
       <Stack.Screen name="TabNavigator" component={TabNavigator} />
       <Stack.Screen name="DetailScreen" component={DetailScreen} />
+      {/* <Stack.Screen name="DetailHeader" component={DetaiHeader} /> */}
     </Stack.Navigator>
   );
 };

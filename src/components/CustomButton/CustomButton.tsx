@@ -1,22 +1,41 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React, {FC, useContext} from 'react';
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  useColorScheme,
+} from 'react-native';
+import React, {FC, useContext, useEffect, useState} from 'react';
 import Colors from '@assets/colors/color';
 import {AuthContext} from '@components/AuthContext/AuthContext';
 
 interface button {
   onPress?: () => void;
-  text?: string;
+  text?: any;
   id?: any;
 }
 const CustomButton: FC<button> = ({onPress, text, id}) => {
-  const {setMyProvince} = useContext(AuthContext);
+  const {myProvince, setMyProvince} = useContext(AuthContext);
+  const [index] = useState(0);
   return (
     <>
       <View style={styles.container}>
         <TouchableOpacity
+          key={index}
           onPress={() => setMyProvince(text)}
-          style={[styles.btnActive]}>
-          <Text style={styles.textActive}>{text}</Text>
+          style={
+            myProvince.toLowerCase() == text.toLowerCase()
+              ? styles.btnActive
+              : styles.btnInActive
+          }>
+          <Text
+            style={
+              myProvince.toLowerCase() == text.toLowerCase()
+                ? styles.textActive
+                : styles.textInActive
+            }>
+            {text}
+          </Text>
         </TouchableOpacity>
       </View>
     </>
@@ -38,6 +57,18 @@ const styles = StyleSheet.create({
     marginTop: 20,
     height: 36,
     backgroundColor: Colors.red,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 10,
+    width: '90%',
+    alignSelf: 'center',
+  },
+  btnInActive: {
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 20,
+    height: 36,
+    backgroundColor: Colors.semi_grey,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,

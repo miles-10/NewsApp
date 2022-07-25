@@ -1,32 +1,33 @@
-import {Alert, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Alert,
+  Dimensions,
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import Colors from '@assets/colors/color';
 
-const SavedScreen = () => {
-  const showToast = () => {
-    Alert.alert('Feature Comming Soon!', 'This Feature is unavailable', [
-      {text: 'OK', onPress: () => console.log('OK Pressed')},
-    ]);
-  };
+import {useSaved} from '@components/AuthContext/SavedContext';
+import SavedNews from '@components/SavedNews/SavedNews';
+const SavedScreen = ({route}: any) => {
+  const {saved} = useSaved();
+
   return (
-    <View style={styles.mainContainer}>
-      <TouchableOpacity onPress={showToast}>
-        <Text style={styles.text}>Comming Soon!</Text>
-      </TouchableOpacity>
-    </View>
-  );
+  <View style={styles.mainContainer}>
+  <SavedNews data={saved} />
+  </View>
+  )
 };
 
 export default SavedScreen;
 
 const styles = StyleSheet.create({
   mainContainer: {
-    alignItems: 'center',
-  },
-  text: {
-    marginTop: 300,
-    color: Colors.red,
-    fontSize: 20,
-    fontFamily: 'Mont-Bold',
-  },
-});
+    backgroundColor: Colors.semi_grey,
+    height: '100%',
+  }
+})

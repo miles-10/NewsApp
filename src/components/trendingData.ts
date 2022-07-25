@@ -1,6 +1,6 @@
 export const trendingNews = [
   {
-    id: 1,
+    id: 48,
     state: 'Sher Bd. Deuba',
     image: require('../assets/images/sher1.jpg'),
     title: 'Deuba in Delhi: India wants to announce support for a mega project',
@@ -13,7 +13,7 @@ export const trendingNews = [
         \n The ‘mega’ projects being discussed include the Second International Airport and setting up of railway networks in areas near the border with Nepal. The Pancheswor Dam is also on the agenda.`,
   },
   {
-    id: 2,
+    id: 49,
     state: 'Sher Bd. Deuba',
     image: require('../assets/images/sher2.jpg'),
     title: 'PM-elect Deuba to assume office today',
@@ -24,7 +24,7 @@ export const trendingNews = [
         \n Deuba is expected to name a handful of ministers today as coalition partners are yet to finalise the list of new ministers.`,
   },
   {
-    id: 3,
+    id: 50,
     state: 'Sher Bd. Deuba',
     image: require('../assets/images/2.png'),
     title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
@@ -36,7 +36,7 @@ export const trendingNews = [
         \nDiam tellus bibendum at. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl.Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi`,
   },
   {
-    id: 4,
+    id: 51,
     state: 'Gagan Thapa',
     image: require('../assets/images/gag1.jpg'),
     title:
@@ -52,7 +52,7 @@ export const trendingNews = [
         \n5. Thapa demanded that either the prime minister or the chief of the high-level Covid-19 control committee (DPM Ishwar Pokharel) respond to his questions in the House. `,
   },
   {
-    id: 5,
+    id: 52,
     state: 'Gagan Thapa',
     image: require('../assets/images/gag2.jpg'),
     title:
@@ -64,7 +64,7 @@ export const trendingNews = [
         \n Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi, purus, nunc sapien. Diam tellus bibendum at. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl.Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi`,
   },
   {
-    id: 6,
+    id: 53,
     state: 'Gagan Thapa',
     image: require('../assets/images/gag3.jpg'),
     title:
@@ -77,7 +77,7 @@ export const trendingNews = [
         \n He suggested the government expand the range of PCR tests, improve contract tracing, focus on hospital-centric preparations, provide security and motivation to healthcare workers, manage repatriations of Nepali migrant workers stranded abroad, and ensure smooth availability of health workers, medicines, and medical equipment.`,
   },
   {
-    id: 7,
+    id: 54,
     state: 'Bishwa Prakash Sharma',
     image: require('../assets/images/bis1.jpg'),
     title: 'Congress will be ‘good opposition’ after communist merger',
@@ -90,7 +90,7 @@ export const trendingNews = [
         \n Speaking at a press meet organised in Banke on Friday morning, Sharma said, “The opposition party must play creative and constructive roles. Throwing stones and holding strikes are not the mark of a character of a good opposition; Nepali Congress is a good opposition party.”\n Stating that NC would review the works after the incumbent government reaches its hundred days in office, he said that his party would raise alertness over weak and wrong steps and not stint in extending support on good works.`,
   },
   {
-    id: 8,
+    id: 55,
     state: 'Bishwa Prakash Sharma',
     image: require('../assets/images/bis2.jpg'),
     title: 'Nepalil Congress likely to field Bishwa Prakash Sharma against Oli',
@@ -102,7 +102,7 @@ export const trendingNews = [
         \n Meanwhile, Sharma has expressed readiness to contest the polls from any constituency the party decides.`,
   },
   {
-    id: 9,
+    id: 56,
     state: 'Bishwa Prakash Sharma',
     image: require('../assets/images/bis3.jpg'),
     title:
@@ -114,7 +114,7 @@ export const trendingNews = [
         \n Speaking with journalists in Pokhara on Monday, Sharma also demanded that the government immediately publish a new map of Nepal clearly marking its borders with India and China. He added that the opposition party would do so if the government did not publish a new map on time.`,
   },
   {
-    id: 10,
+    id: 57,
     state: 'Sher Bd. Deuba',
     image: require('../assets/images/sher1.jpg'),
     title: 'Deuba in Delhi: India wants to announce support for a mega project',
@@ -127,7 +127,7 @@ export const trendingNews = [
         \n The ‘mega’ projects being discussed include the Second International Airport and setting up of railway networks in areas near the border with Nepal. The Pancheswor Dam is also on the agenda.`,
   },
   {
-    id: 11,
+    id: 58,
     state: 'Gagan Thapa',
     image: require('../assets/images/gag2.jpg'),
     title:
@@ -139,7 +139,7 @@ export const trendingNews = [
         \n Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi, purus, nunc sapien. Diam tellus bibendum at. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl.Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi`,
   },
   {
-    id: 12,
+    id: 59,
     state: 'Bishwa Prakash Sharma',
     image: require('../assets/images/bis2.jpg'),
     title: 'Nepalil Congress likely to field Bishwa Prakash Sharma against Oli',

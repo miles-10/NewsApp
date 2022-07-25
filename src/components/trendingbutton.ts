@@ -1,14 +1,14 @@
 export const trending = [
     {
-        id : 1,
+        id : 60,
         name : "Sher Bd. Deuba",
     },
     {
-        id : 2,
+        id : 61,
         name : "Gagan Thapa",
     },
     {
-        id : 3,
+        id : 62,
         name : "Bishwa Prakash Sharma",
     },
 ]

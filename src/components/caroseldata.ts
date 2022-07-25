@@ -1,6 +1,6 @@
 export const carouseldata = [
   {
-    id: 1,
+    id: 43,
     image: require('../assets/images/car1.jpg'),
     title: 'Nepali Congress, Maoist Centre launch efforts to change Bagmati CM',
     name: 'Online Khabar',
@@ -14,7 +14,7 @@ export const carouseldata = [
       \n“We might need to complete this procedure anytime,” a Maoist Centre lawmaker says, “This is the monsoon season and the lawmakers cannot be available on time. Hence, we have already begun collecting signatures.”`,
   },
   {
-    id: 2,
+    id: 44,
     image: require('../assets/images/car2.jpg'),
     title:
       'PM Deuba in Dadeldhura for local elections, to return to office after voting only',
@@ -26,7 +26,7 @@ export const carouseldata = [
         \n Deuba is scheduled to address two mass meetings of his Nepali Congress party in Amargadhi and Parashuram municipalities of the district before the Election Commission imposes the silence period for the local elections.`,
   },
   {
-    id: 3,
+    id: 45,
     image: require('../assets/images/car3.png'),
     title: 'Nepali Congress registers its own constitution amendment bill ',
     name: 'Kathmandu Post',
@@ -37,7 +37,7 @@ export const carouseldata = [
         \n “This bill we have registered is a private bill, and it should receive support from the government,” said Nepali Congress lawmaker Amresh Kumar Singh, who registered the bill. The bill, which had been shot down in July 2017 due to opposition from the then CPN-UML led by KP Sharma Oli, seeks to include all languages spoken in Nepal in the schedule of the constitution, accord equal citizenship rights to foreign women married to Nepali men and delineate electoral constituencies on the basis of population. `,
   },
   {
-    id: 4,
+    id: 46,
     image: require('../assets/images/sher1.jpg'),
     title: 'NC seeks voting rights for migrant Nepalis',
     name: 'Himalayan Times',
@@ -49,7 +49,7 @@ export const carouseldata = [
         \n It's a difficult process and I do not think that we will be able to ensure voting rights for migrant Nepalis in the upcoming parliamentary and provincial polls, he added.Paudel, however, said the EC would do everything in its power to ensure voting rights for migrant Nepalis.`,
   },
   {
-    id: 5,
+    id: 47,
     image: require('../assets/images/gag1.jpg'),
     title: 'Congress comes up with formal decision on poll alliance',
     name: 'Kathmandu Post',
